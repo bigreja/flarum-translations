@@ -1,98 +1,98 @@
 {
     "ianm-html-head": {
         "admin": {
-            "create_button": "",
+            "create_button": "Criar",
             "help": {
-                "intro": "",
-                "preconnect": "",
-                "cache": "",
-                "pages": "",
-                "location": ""
+                "intro": "Adicione etiquetas personalizadas para injetar no HTML do seu fórum. Os itens são guardados em cache e servidos de forma eficiente — sem consultas à base de dados ao carregar a página.",
+                "preconnect": "As etiquetas link e script que apontam para origens externas recebem automaticamente sugestões preconnect e dns-prefetch, preparando a ligação antes de o navegador precisar dela.",
+                "cache": "O HTML renderizado é guardado em cache ao guardar. As alterações entram em vigor de imediato sem limpar toda a cache do site.",
+                "pages": "Cada item pode direcionar a interface do fórum, o painel de administração ou ambos.",
+                "location": "Os itens podem ser injetados no head ou no final do body."
             },
             "table": {
-                "drag_handle": "",
-                "description_label": "",
-                "type_label": "",
-                "location_label": "",
-                "pages_label": "",
-                "active_label": "",
-                "empty_text": "",
-                "delete_button": "",
-                "edit_button": "",
-                "delete_confirm": ""
+                "drag_handle": "Arraste para reordenar",
+                "description_label": "Descrição",
+                "type_label": "Tipo",
+                "location_label": "Localização",
+                "pages_label": "Páginas",
+                "active_label": "Ativo",
+                "empty_text": "Ainda não existem itens. Clique em Criar para adicionar o primeiro item ao head.",
+                "delete_button": "Eliminar",
+                "edit_button": "Editar",
+                "delete_confirm": "Tem a certeza de que pretende eliminar este item?"
             },
             "modal": {
-                "create_title": "",
-                "edit_title": "",
-                "description_label": "",
-                "description_help": "",
-                "type_label": "",
-                "location_label": "",
-                "location_help": "",
-                "pages_label": "",
-                "save_button": "",
+                "create_title": "Criar Item Head",
+                "edit_title": "Editar Item Head",
+                "description_label": "Descrição",
+                "description_help": "Uma legenda para referência própria — não é injetada na página.",
+                "type_label": "Tipo",
+                "location_label": "Injetar em",
+                "location_help": "Head: carregado antes da renderização da página, ideal para estilos e meta críticas. Rodapé: carregado após o conteúdo da página, ideal para scripts não críticos.",
+                "pages_label": "Aplicar a",
+                "save_button": "Guardar",
                 "type": {
-                    "meta": "",
-                    "link": "",
-                    "script": "",
-                    "style": "",
-                    "raw": ""
+                    "meta": "Etiqueta Meta",
+                    "link": "Ligação (Link)",
+                    "script": "Script",
+                    "style": "Estilo",
+                    "raw": "HTML Bruto"
                 },
                 "location": {
-                    "head": "",
-                    "foot": ""
+                    "head": "Head",
+                    "foot": "Rodapé"
                 },
                 "pages": {
-                    "forum": "",
-                    "admin": ""
+                    "forum": "Fórum",
+                    "admin": "Painel de Administração"
                 },
                 "meta": {
-                    "variant_label": "",
-                    "name_label": "",
-                    "name_placeholder": "",
-                    "name_help": "",
-                    "property_label": "",
-                    "property_placeholder": "",
-                    "content_label": ""
+                    "variant_label": "Variante",
+                    "name_label": "name=\"\"",
+                    "name_placeholder": "Escolha ou escreva um nome",
+                    "name_help": "Os itens chamados description, viewport ou theme-color substituem a etiqueta que o Flarum já gera, em vez de adicionar uma segunda.",
+                    "property_label": "property=\"\" (Open Graph)",
+                    "property_placeholder": "Escolha ou escreva uma propriedade",
+                    "content_label": "Conteúdo"
                 },
                 "link": {
-                    "rel_label": "",
-                    "href_label": "",
-                    "as_label": "",
-                    "as_help": "",
-                    "crossorigin_label": "",
-                    "crossorigin_help": "",
-                    "fetchpriority_label": "",
-                    "fetchpriority_default": "",
-                    "fetchpriority_help": "",
-                    "extras_label": "",
-                    "extras_add": "",
-                    "extras_remove": ""
+                    "rel_label": "rel=\"\"",
+                    "href_label": "href=\"\" (URL)",
+                    "as_label": "as=\"\"",
+                    "as_help": "Indica ao navegador que tipo de recurso está a ser pré-carregado para que possa definir os cabeçalhos de pedido corretos. Obrigatório para rel=preload.",
+                    "crossorigin_label": "Adicionar crossorigin=\"anonymous\"",
+                    "crossorigin_help": "Obrigatório para tipos de letra e scripts carregados a partir de outro domínio para que o navegador possa partilhar a ligação. Ative se o recurso estiver noutra origem.",
+                    "fetchpriority_label": "fetchpriority=\"\"",
+                    "fetchpriority_default": "predefinição do navegador",
+                    "fetchpriority_help": "Sugestão ao navegador sobre a prioridade relativa deste recurso. high: carregar mais cedo (ex.: imagem principal ou folha de estilos crítica). low: carregar mais tarde (ex.: recurso abaixo da dobra). Deixe por definir para deixar o navegador decidir.",
+                    "extras_label": "Atributos adicionais",
+                    "extras_add": "Adicionar atributo",
+                    "extras_remove": "Remover"
                 },
                 "script": {
-                    "external_label": "",
-                    "inline_label": "",
-                    "src_label": "",
-                    "inline_content_label": "",
-                    "defer_label": "",
-                    "defer_help": "",
-                    "async_label": "",
-                    "async_help": "",
-                    "module_label": "",
-                    "module_help": "",
-                    "crossorigin_label": "",
-                    "crossorigin_help": ""
+                    "external_label": "Externo (src)",
+                    "inline_label": "Em linha (Inline)",
+                    "src_label": "src=\"\" (URL)",
+                    "inline_content_label": "Conteúdo do script",
+                    "defer_label": "defer",
+                    "defer_help": "O script é executado após a análise da página, sem bloquear a renderização. Ideal para a maioria dos scripts.",
+                    "async_label": "async",
+                    "async_help": "O script é executado assim que é descarregado, fora de ordem. Ideal para scripts independentes como analítica.",
+                    "module_label": "type=\"module\"",
+                    "module_help": "Ative se a documentação do fornecedor do script indicar a utilização de type=\"module\". Os módulos carregam após a página sem a bloquear.",
+                    "crossorigin_label": "crossorigin=\"anonymous\"",
+                    "crossorigin_help": "Obrigatório ao carregar scripts de outro domínio que necessitem de acesso CORS."
                 },
                 "style": {
-                    "inline_label": "",
-                    "inline_help": ""
+                    "inline_label": "Conteúdo CSS",
+                    "inline_help": "Aplicado globalmente a todas as páginas visadas por este item. Mantenha as regras específicas para evitar efeitos secundários indesejados."
                 },
                 "raw": {
-                    "content_label": "",
-                    "help_text": ""
+                    "content_label": "HTML",
+                    "help_text": "Introduza HTML bruto. As sugestões preconnect são geradas automaticamente para quaisquer etiquetas link ou script de origem cruzada encontradas aqui. A ordem de ordenação e o estado ativo funcionam normalmente, mas as funcionalidades específicas do tipo (fetchpriority, defer, etc.) não estão disponíveis — utilize um tipo estruturado se precisar delas."
                 },
-                "preview_label": "",
-                "preview_empty": ""
+                "preview_label": "Pré-visualização",
+                "preview_empty": "Preencha os campos acima para ver uma pré-visualização."
             }
         }
     }

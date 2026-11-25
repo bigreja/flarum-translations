@@ -2,84 +2,84 @@
     "fof-horizon": {
         "admin": {
             "settings": {
-                "locked_by_env": "",
-                "locked_by_code": "",
-                "mail_title": "",
-                "mail_help": "",
-                "email_concurrency": "",
-                "email_concurrency_help": "",
-                "trim_title": "",
-                "trim_help": "",
-                "trim_recent": "",
-                "trim_recent_help": "",
-                "trim_pending": "",
-                "trim_pending_help": "",
-                "trim_completed": "",
-                "trim_completed_help": "",
-                "trim_recent_failed": "",
-                "trim_recent_failed_help": "",
-                "trim_failed": "",
-                "trim_failed_help": "",
-                "trim_monitored": "",
-                "trim_monitored_help": "",
-                "supervisor_title": "",
-                "supervisor_help": "",
-                "memory_limit": "",
-                "memory_limit_help": ""
+                "locked_by_env": "Definido por uma variável de ambiente como {value} — altere lá, não aqui.",
+                "locked_by_code": "Definido no código (config.php ou extend.php) como {value} — altere lá, não aqui.",
+                "mail_title": "Entrega de E-mails",
+                "mail_help": "Controle quantos e-mails são enviados ao mesmo tempo. Cada worker envia um\ne-mail de cada vez, pelo que este é o número de mensagens de saída simultâneas.\nDefina para o limite de ligações simultâneas do seu fornecedor de e-mail para não\no exceder. Deixe em branco para a predefinição (1).\n",
+                "email_concurrency": "E-mails de saída simultâneos",
+                "email_concurrency_help": "O número máximo de e-mails entregues de uma só vez. Uma variável de ambiente\n(REDIS_HORIZON_EMAIL_CONCURRENCY) ou um valor no config.php, se definidos,\nsubstituem este valor.\n",
+                "trim_title": "Configurações de Limpeza",
+                "trim_help": "Aqui pode configurar durante quanto tempo (em minutos) pretende que o Horizon\nmantenha os jobs recentes e os jobs com falha. Normalmente, os jobs recentes são mantidos\ndurante uma hora, enquanto todos os jobs com falha são guardados durante uma semana inteira.\n",
+                "trim_recent": "Limpar Jobs Recentes",
+                "trim_recent_help": "Esta tabela é utilizada para apresentar os jobs recentes no painel do Horizon.\n",
+                "trim_pending": "Limpar Jobs Pendentes",
+                "trim_pending_help": "Esta tabela é utilizada para apresentar os jobs pendentes no painel do Horizon.\n",
+                "trim_completed": "Limpar Jobs Concluídos",
+                "trim_completed_help": "Esta tabela é utilizada para apresentar os jobs concluídos no painel do Horizon.\n",
+                "trim_recent_failed": "Limpar Jobs com Falha Recentes",
+                "trim_recent_failed_help": "Esta tabela é utilizada para apresentar os jobs com falha recentes no painel do Horizon.\n",
+                "trim_failed": "Limpar Jobs com Falha",
+                "trim_failed_help": "Esta tabela é utilizada para apresentar os jobs com falha no painel do Horizon.\n",
+                "trim_monitored": "Limpar Jobs Monitorizados",
+                "trim_monitored_help": "Esta tabela é utilizada para apresentar os jobs monitorizados no painel do Horizon.\n",
+                "supervisor_title": "Configurações de Workers",
+                "supervisor_help": "O Horizon executa os workers da fila em perfis por níveis (standard, fast,\nlong, emails). A quantidade de workers, a memória e as filas são configuradas por\nimplementação através das variáveis de ambiente REDIS_HORIZON_*, config.php (na\nchave \"horizon\") ou do extender Horizon no extend.php — consulte o README da\nextensão. Reinicie o Horizon após alterar a configuração dos workers.\n",
+                "memory_limit": "Limite de Memória do Processo Mestre (MB)",
+                "memory_limit_help": "Limite de memória do processo supervisor mestre do Horizon: ao ultrapassá-lo, o\nmestre reinicia-se automaticamente. A memória de cada worker é definida pelo seu supervisor.\n"
             },
             "stats": {
-                "queue_heading": "",
-                "full_dashboard": "",
-                "auto_refresh": "",
-                "refresh": "",
+                "queue_heading": "Fila",
+                "full_dashboard": "Painel do Horizon",
+                "auto_refresh": "Atualização Automática",
+                "refresh": "Atualizar",
                 "error": {
-                    "title": "",
-                    "fetch_failed": "",
-                    "setup_docs": ""
+                    "title": "Erro de Ligação",
+                    "fetch_failed": "Não foi possível obter as estatísticas do Horizon. Verifique a sua configuração do Redis.",
+                    "setup_docs": "Ver Documentação de Configuração do Redis"
                 },
                 "health": {
-                    "excellent": "",
-                    "good": "",
-                    "poor": "",
-                    "critical": "",
-                    "tooltip_heading": "",
+                    "excellent": "Excelente",
+                    "good": "Boa",
+                    "poor": "Fraca",
+                    "critical": "Crítica",
+                    "tooltip_heading": "Índice de saúde: {score}/100",
                     "factor": {
-                        "status": "",
-                        "wait": "",
-                        "memory": ""
+                        "status": "O Horizon está {value}",
+                        "wait": "Espera longa na fila: {value}",
+                        "memory": "Pressão de memória do Redis: {value}"
                     }
                 },
                 "status": {
-                    "running": "",
-                    "paused": "",
-                    "inactive": "",
-                    "paused_pending": ""
+                    "running": "Em execução",
+                    "paused": "Em pausa",
+                    "inactive": "Inativo",
+                    "paused_pending": "Em pausa · {count} em espera"
                 },
                 "period": {
-                    "minutes": "",
-                    "hour": "",
-                    "hours": "",
-                    "day": "",
-                    "days": ""
+                    "minutes": "últimos {count} min",
+                    "hour": "última hora",
+                    "hours": "últimas {count} horas",
+                    "day": "último dia",
+                    "days": "últimos {count} dias"
                 },
                 "data": {
-                    "processes": "",
-                    "jobs-per-minute": "",
-                    "pending-jobs": "",
-                    "recent-jobs": "",
-                    "failed-jobs": "",
-                    "max-wait": "",
-                    "slowest-queue": "",
-                    "highest-throughput-queue": ""
+                    "processes": "Processos de Worker",
+                    "jobs-per-minute": "Jobs por Minuto",
+                    "pending-jobs": "Jobs Pendentes",
+                    "recent-jobs": "Jobs",
+                    "failed-jobs": "Jobs com Falha",
+                    "max-wait": "Espera Máxima",
+                    "slowest-queue": "Fila Mais Lenta",
+                    "highest-throughput-queue": "Fila Mais Movimentada"
                 },
                 "tile": {
-                    "processes": "",
-                    "jobs_per_minute": "",
-                    "max_wait": "",
-                    "status": ""
+                    "processes": "Processos de Worker",
+                    "jobs_per_minute": "Jobs / Min",
+                    "max_wait": "Espera Máxima",
+                    "status": "Estado"
                 },
-                "horizon_max_wait_none": "",
-                "horizon_max_wait_value": ""
+                "horizon_max_wait_none": "Nenhuma",
+                "horizon_max_wait_value": "{seconds}s em {queue}"
             }
         }
     }
